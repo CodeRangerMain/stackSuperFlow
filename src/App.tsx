@@ -1,12 +1,22 @@
-import React from "react";
-import { MainWrapper } from "./shared/styles/App.styled";
 import { Header } from "./widgets/Header";
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import { Questions } from "./widgets/Questions";
+import { Contexts } from "contexts";
+import { Wrapper } from "App.styled";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Contexts>
+      <Wrapper className="App">
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/*" element={<Questions />} />
+          </Routes>
+        </BrowserRouter>
+      </Wrapper>
+    </Contexts>
   );
 }
 

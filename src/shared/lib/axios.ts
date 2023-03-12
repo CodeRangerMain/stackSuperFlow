@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export const baseURL = "https://api.stackexchange.com";
+export const baseURL = "https://api.stackexchange.com/2.3";
+export const key = "ktVjqvbbpIwAO9HkRr8H)A((";
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
